@@ -1,0 +1,25 @@
+what is Virtual DOM : 
+              Virtual DOM (Virtual Document Object Model) is a programming concept and technique commonly used in web development frameworks to optimize the rendering and updating of user interfaces. 
+              It is particularly associated with libraries like React.js.The traditional DOM is a representation of the structure of a web page in the browser, constructed as a tree of objects (nodes).
+              Manipulating the DOM directly can be expensive in terms of performance because each change to the DOM triggers reflows and repaints, which can slow down the user interface.
+
+              Virtual DOM is an abstraction that aims to improve this process. It works by creating a lightweight, in-memory representation of the actual DOM. When changes are made to 
+              the UI in a web application, these changes are first applied to the virtual DOM rather than directly to the real DOM. Then, the virtual DOM is compared to the previous version of itself (the state before the update).
+              This comparison results in a set of efficient update operations needed to sync the virtual DOM with the actual DOM.
+
+              The benefit of this approach is that the updates to the actual DOM are minimized, and they are batched together for optimal performance. 
+              This significantly reduces the number of expensive reflows and repaints, resulting in a smoother user experience and better performance.
+
+            Here's a simplified step-by-step process of how Virtual DOM works:
+
+                  Initial render: The initial UI is rendered and a virtual DOM representation is created.
+                  Changes: When a user interacts with the UI or data changes occur, a new virtual DOM is created with the updated state.
+                  Reconciliation: The new virtual DOM is compared to the previous one to identify the differences (what needs to be added, updated, or removed).
+                  Efficient updates: Based on the identified differences, the minimal set of changes needed to update the real DOM is computed.
+                  Apply changes: The computed changes are then applied to the real DOM, resulting in a faster and more efficient UI update.
+                  React.js is one of the most well-known libraries that uses the Virtual DOM concept. Other frameworks like Vue.js also incorporate similar techniques
+                  to achieve improved UI rendering performance.
+
+
+
+
