@@ -1,0 +1,64 @@
+what is Components : 
+components are the building blocks fof React Application. they are reusable and self-contained unit fof code that encapuslate a piece functionality and UI Logic.
+React application are typically composed of multiple components that work together to create the user interface.
+
+there arfe two types of Components : 
+1) Functional components
+2) Class components
+
+1) functional components :   Functional components are JavaScript functions that return JSX (JavaScript XML) elements.
+                             JSX is a syntax extension that allows you to write HTML-like code within your JavaScript code. 
+                             These components take in props (short for properties) as arguments and return the rendered UI elements based on those props.
+
+                      ex .
+                      import React from 'react';
+                      const Greeting = (props) => {
+                        return <div>Hello, {props.name}!</div>;
+                      };
+                      export default Greeting;
+
+
+2) class components : 
+                        Traditionally, React components were defined as classes, with the class syntax. These are known as class components.
+                        However, with the introduction of React Hooks, functional components gained more capabilities and can now manage local state and perform side effects similarly to class components. 
+                        This made functional components a popular choice due to their simplicity and reusability.
+
+ex. 
+          import React, { Component } from 'react';
+          class Counter extends Component {
+            constructor(props) {
+              super(props);
+              this.state = {
+                count: 0
+              };
+              this.increment = this.increment.bind(this);
+              this.decrement = this.decrement.bind(this);
+            }
+          
+            increment() {
+              this.setState((prevState) => ({
+                count: prevState.count + 1
+              }));
+            }
+          
+            decrement() {
+              this.setState((prevState) => ({
+                count: prevState.count - 1
+              }));
+            }
+          
+            render() {
+              return (
+                <div>
+                  <h2>Counter</h2>
+                  <p>Count: {this.state.count}</p>
+                  <button onClick={this.increment}>Increment</button>
+                  <button onClick={this.decrement}>Decrement</button>
+                </div>
+              );
+            }
+          }
+          
+          export default Counter;
+          
+
