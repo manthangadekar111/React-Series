@@ -1,0 +1,10 @@
+setState is a method that is used to update the component's state. It's used to notify React that the state of the component has changed and that it should re-render the component to reflect the updated state.
+Here's how you can use setState in a React class component:
+
+addstart = () =>{
+this.setState({
+count : this.state.count + 1;
+});
+}
+
+so here we update count state.
