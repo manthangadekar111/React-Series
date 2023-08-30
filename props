@@ -1,0 +1,6 @@
+In React, "props" (short for properties) are a fundamental concept used for passing data from a parent component to a child component. 
+They allow you to configure and customize components by providing them with data and functions. Props are read-only, meaning that a child component cannot modify the props it receives from its parent.
+Here's a basic overview of how props work in React:
+Parent Component: In your parent component's JSX, you can pass data to a child component by adding attributes to the child component element. These attributes represent the props.
+Child Component: In the child component, you can access the props passed from the parent using the props object. You can use the values of the props in your component's rendering logic.
+Props can be of any data type, including strings, numbers, objects, arrays, and even functions. You can pass multiple props to a child component by adding more attributes to the child component element.
